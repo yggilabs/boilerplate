@@ -1,0 +1,30 @@
+$env_breakpoint: {{ site.env_breakpoint | default: "1279px" }};
+
+:root {
+  {% assign theme_name = site.theme_name %}
+  {% unless theme_name %}
+    {% assign theme_name = "default" %}
+  {% endunless %}
+  {% assign theme = site.data.themes | where: "name", theme_name | first %}
+  {% assign list = theme.colors %}
+  --color__1: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__2: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__3: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__4: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__5: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__6: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__7: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__8: {{ list.first }};
+  {% assign list = list | shift %}
+  --color__9: {{ list.first }};
+}
+
+@import "layout";
+@import "custom";
