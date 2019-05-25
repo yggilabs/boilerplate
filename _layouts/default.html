@@ -29,7 +29,10 @@ layout: compress
     {% seo %}
   </head>
   <body class="site markdown-body">
-    {{ content }}
+    <main class="site_main">
+      {{ content }}
+    </main>
+    <footer class="site__footer"></footer>
     {% include sw.html %}
   </body>
 </html>
