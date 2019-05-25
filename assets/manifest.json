@@ -1,0 +1,34 @@
+---
+layout: strip
+---
+{% assign theme_name = site.theme_name %}
+{% unless theme_name %}
+  {% assign theme_name = "default" %}
+{% endunless %}
+{% assign theme = site.data.themes | where: "name", theme_name | first %}
+{
+  "short_name": "{{ site.short_name }}",
+  "name": "{{ site.name }}",
+  "icons": [
+    {
+      "src": "{{ site.github.baseurl }}/assets/images/icon.svg",
+      "type": "image/svg",
+      "sizes": "1600x1600"
+    },
+    {
+      "src": "{{ site.github.baseurl }}/assets/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "{{ site.github.baseurl }}/assets/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "{{ site.github.baseurl }}/?source=pwa",
+  "background_color": "{{ theme.colors[3] }}",
+  "display": "standalone",
+  "scope": "{{ site.github.baseurl }}/",
+  "theme_color": "{{ theme.colors[2] }}"
+}
