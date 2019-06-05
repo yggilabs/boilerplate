@@ -11,11 +11,6 @@ layout: strip
   "name": "{{ site.name }}",
   "icons": [
     {
-      "src": "{{ site.github.baseurl }}/assets/images/icon.svg",
-      "type": "image/svg",
-      "sizes": "1600x1600"
-    },
-    {
       "src": "{{ site.github.baseurl }}/assets/images/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
