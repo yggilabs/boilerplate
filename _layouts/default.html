@@ -31,14 +31,7 @@ layout: compress
   </head>
   <body>
     {% include analytics.html %}  
-    <div class="site markdown-body">
-      <header class="site__header">{% include header.html %}</header>
-      <aside class="site__aside">{% include aside.html %}</aside>
-      <main class="site__main">
-        {{ content }}
-      </main>
-      <footer class="site__footer">{% include footer.html %}</footer>
-    </div>
+    {{ content }}
     {% include sw.html %}
   </body>
 </html>
