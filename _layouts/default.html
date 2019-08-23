@@ -31,7 +31,7 @@ layout: compress
     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     {% seo %}
   </head>
-  <body class="{% if page.theme %}{{ page.theme | prepend: "theme--" }}{% endif %}">
+  <body>
     {% include analytics.html %}  
     {{ content }}
     {% include sw.html %}
