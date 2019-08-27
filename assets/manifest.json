@@ -22,8 +22,8 @@ layout: strip
     }
   ],
   "start_url": "{{ site.github.baseurl }}/?source=pwa",
-  "background_color": "{{ theme.colors[3] }}",
+  "background_color": "{{ site.background_color | default: theme.colors[3] }}",
   "display": "standalone",
   "scope": "{{ site.github.baseurl }}/",
-  "theme_color": "{{ theme.colors[2] }}"
+  "theme_color": "{{ site.theme_color | default: theme.colors[2] }}"
 }
